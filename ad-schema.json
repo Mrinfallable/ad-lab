@@ -1,0 +1,27 @@
+{
+    "domain": "bank.internal",
+    "groups": [
+        { "name": "Domain Users" },
+        { "name": "HelpDesk" }
+    ],
+    "users": [
+        {
+            "local_admin": ["ws01", "ws02", "ws03", "srv-sql-01"],
+            "name": "Admin Strator",
+            "password": "Password123",
+            "groups": ["HelpDesk"]
+        },
+        {
+            "local_admin": ["ws01"],
+            "name": "User One",
+            "password": "123456",
+            "groups": ["Domain Users"]
+        },
+        {
+            "local_admin": ["srv-sql-01"],
+            "name": "Service Account",
+            "password": "backup_password",
+            "groups": ["Domain Users"]
+        }
+    ]
+}
